@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](https://github.com/Youssefnjah/Cybersecurity-Work/blob/main/Untitled%20Diagram.drawio)
+![Network Diagram](https://raw.githubusercontent.com/Youssefnjah/Cybersecurity-Work/main/Capture.PNG)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
