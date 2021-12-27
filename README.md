@@ -90,3 +90,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to kibana to check that the installation worked as expected.
 
 ### Bash Scripts
+
+- In this activity we were tasked with surfing a directory of info and logs of time stamps and schedules to uncover a scammer and an employee who was helping, we were tasked with writing bash scripts that would filter through logs of info and pull out specific peices with names and dates. Here is a link to all my notes, conclusions findings and scripts.
+
+![Rouleete Findings](https://github.com/Youssefnjah/Cybersecurity-Work/tree/main/Roulette_Findings)
