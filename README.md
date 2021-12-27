@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Network Diagram](https://raw.githubusercontent.com/Youssefnjah/Cybersecurity-Work/main/Capture.PNG)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible, playbook, and filebeat files may be used to install only certain pieces of it, such as Filebeat.
 
 ![Playbook and Ansible Files](https://github.com/Youssefnjah/Cybersecurity-Work/tree/main/ansible)
 
@@ -21,45 +21,44 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- Load balancers provide security against Ddos attacks by spreading the traffic that comes in equally amongst the Web VM's. Load balancers also provide a level of application reliability and it allows server to be taken down without affecting the other servers.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+
+- Filebeat monitors and centralizes log data collects it and then forwards it to elasticsearch for indexing.
+- Metric beat colects metric data and statistics then outputs it to where you specify such as log stash or elasticsearch.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Web1     | DVWA     | 10.0.0.5   | Linux                |
+| Web2     | DVWA     | 10.0.0.6   | Linux                 |
+| Web3     | DVWA     | 10.0.0.7   | Linux                 |
+| ELKVM    | ELK server | 10.1.0.4   | Linux                  |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the Ip that you specify For my case it is my personal machine's Ip
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- Machines within the network can only be accessed by ssh through the Jump Box which has an Ip of 10.0.0.4 The ELK VM can be accesed through port 5601 however it has a network security group that only allows traffic from a specified Ip addess which in this case is also my personal Ip address
+
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 40.76.84.162         |
+| Web1     | No                  | 10.0.0.4             |
+| Web2     | No                  | 10.0.0.4             |
+| Web3     | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Automating configaration with ansible has many advantages the main one is time saving, this automation process also provides consistency and reduces user error.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
