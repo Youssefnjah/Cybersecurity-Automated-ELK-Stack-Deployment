@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 ![Playbook and Ansible Files](https://github.com/Youssefnjah/Cybersecurity-Work/tree/main/ansible)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -79,7 +79,7 @@ We have installed the following Beats on these machines:
 - ELKVM : 10.1.0.4 , Metricbeat and Filebeat
 
 These Beats allow us to collect the following information from each machine:
-- Filebeat collects user logs and locations then forwards them to log stash or elastic search metricbeat collect statastics such as quantattive data like the servers running on the system then metricbeat forards to logstash or elastic search
+- Filebeat collects user logs and locations then forwards them to log stash or elastic search metricbeat collect statastics such as quantattive data like the servers running on the system then metricbeat forards to logstash or elastic search.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
