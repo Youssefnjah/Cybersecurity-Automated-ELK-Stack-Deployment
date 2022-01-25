@@ -74,7 +74,7 @@ This ELK server is configured to monitor the following machines:
 - Web1 : 10.0.0.5
 - Web2 : 10.0.0.6
 - Web3 : 10.0.0.7
-- 
+
 We have installed the following Beats on these machines:
 - ELKVM : 10.1.0.4 , Metricbeat and Filebeat
 
