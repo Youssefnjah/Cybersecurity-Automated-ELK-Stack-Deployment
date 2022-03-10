@@ -81,13 +81,6 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - Filebeat collects user logs and locations then forwards them to log stash or elastic search metricbeat collect statastics such as quantattive data like the servers running on the system then metricbeat forards to logstash or elastic search.
 
-### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
-
-SSH into the control node and follow the steps below:
-- Copy the beat configuration file to ansible.
-- Update the configuration file to include ELK server
-- Run the playbook, and navigate to kibana to check that the installation worked as expected.
 
 ### Bash Scripts
 
